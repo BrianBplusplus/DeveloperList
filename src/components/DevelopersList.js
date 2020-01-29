@@ -2,7 +2,7 @@ import React from "react";
 import { connect } from "react-redux";
 import api from "../api";
 import Developer from "./Developer";
-import { developersFetched, fetchDevelopers } from "../store/developers/action";
+import { fetchDevelopers } from "../store/developers/action";
 
 // The "unconnected" inner component:
 class DevelopersList extends React.Component {
