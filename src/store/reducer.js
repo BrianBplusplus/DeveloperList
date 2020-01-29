@@ -1,9 +1,9 @@
 import { combineReducers } from "redux";
-import reducer from "./developers/reducer";
+import fetchDeveloper from "./developers/reducer";
 import havingFunReducer from "./developers/havingFunReducer";
 
 export default combineReducers({
   havingFun: havingFunReducer,
-  developers: reducer
+  developers: fetchDeveloper
   // we can add more "slice" subreducers here later on...
 });

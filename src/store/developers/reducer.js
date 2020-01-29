@@ -1,5 +1,5 @@
 const initialState = null;
-export default function reducer(state = initialState, action) {
+export default function fetchDeveloper(state = initialState, action) {
   switch (action.type) {
     case "developers/FETCHED": {
       // => Ask yourself: what is action.payload?
