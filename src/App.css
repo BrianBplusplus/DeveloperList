@@ -1,3 +1,5 @@
+@import url("https://fonts.googleapis.com/css?family=Roboto+Slab&display=swap");
+
 .App {
   text-align: center;
 }
@@ -8,6 +10,14 @@
   min-height: 100vh;
   font-size: calc(10px + 2vmin);
   color: white;
+}
+
+#logo {
+  animation: rotation 2s infinite linear;
+  color: #b34539;
+  text-align: center;
+  font-size: 5em;
+  font-family: Roboto Slab, Monaco, Courier, monospace;
 }
 
 ul {
@@ -64,5 +74,14 @@ ul {
   .developerlist {
     margin-left: 0%;
     margin-right: 0%;
+  }
+}
+
+@keyframes rotation {
+  from {
+    transform: rotate(359deg);
+  }
+  to {
+    transform: rotate(0deg);
   }
 }

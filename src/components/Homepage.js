@@ -4,7 +4,8 @@ export default class Homepage extends Component {
   render() {
     return (
       <div>
-        <h1>HOMEPAGE</h1>
+        <h1>Codaisseur Developers</h1>
+        <p id="logo">{": { )"}</p>
       </div>
     );
   }
