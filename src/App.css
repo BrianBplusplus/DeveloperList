@@ -12,6 +12,19 @@
 
 ul {
   list-style: none;
+  border: solid;
+  padding: 0.5rem;
+  margin: 0.5rem;
+  border-radius: 7px;
+}
+
+.developerlist {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+  text-align: left;
+  margin-left: 20%;
+  margin-right: 20%;
 }
 
 .toolbar {
@@ -41,4 +54,15 @@ ul {
   bottom: -2.5rem;
   width: 100%;
   height: 2.5rem;
+}
+
+@media only screen and (max-width: 724px) {
+  .toolbar a {
+    width: 24%;
+    font-size: 15px;
+  }
+  .developerlist {
+    margin-left: 0%;
+    margin-right: 0%;
+  }
 }

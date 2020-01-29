@@ -29,15 +29,17 @@ class DevelopersList extends React.Component {
         {loading ? (
           <p>Loading devs...</p>
         ) : (
-          this.props.devs.rows.map(currentDev => {
-            return (
-              <Developer
-                key={currentDev.id}
-                name={currentDev.name}
-                email={currentDev.email}
-              />
-            );
-          })
+          <div className="developerlist">
+            {this.props.devs.rows.map(currentDev => {
+              return (
+                <Developer
+                  key={currentDev.id}
+                  name={currentDev.name}
+                  email={currentDev.email}
+                />
+              );
+            })}
+          </div>
         )}
       </div>
     );
