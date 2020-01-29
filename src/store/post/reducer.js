@@ -1,7 +1,9 @@
+// src/store/developers/reducer.js
 const initialState = null;
-export default function fetchDeveloper(state = initialState, action) {
+
+export default function reducer(state = initialState, action) {
   switch (action.type) {
-    case "developers/FETCHED": {
+    case "posts/FETCHED": {
       // => Ask yourself: what is action.payload?
       return action.payload;
     }
