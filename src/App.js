@@ -5,6 +5,7 @@ import DevelopersList from "./components/DevelopersList";
 import Homepage from "./components/Homepage";
 import Toolbar from "./components/Toolbar";
 import PostPage from "./components/PostPage";
+import Footer from "./components/Footer";
 
 function App() {
   return (
@@ -13,9 +14,10 @@ function App() {
         <Toolbar />
         <Switch>
           <Route path="/developers" component={DevelopersList} />
+          <Route path="/read/:id" component={PostPage} />
           <Route path="/" component={Homepage} />
         </Switch>
-        <Route path="/read/:id" component={PostPage} />
+        <Footer />
       </header>
     </div>
   );
