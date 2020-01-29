@@ -2,6 +2,7 @@ import React from "react";
 import { connect } from "react-redux";
 import api from "../api";
 import Developer from "./Developer";
+import { developersFetched } from "../store/developers/action";
 
 // The "unconnected" inner component:
 class DevelopersList extends React.Component {
@@ -10,10 +11,7 @@ class DevelopersList extends React.Component {
 
     api("/developers").then(data => {
       // Tell the Redux store the data has been fetched
-      this.props.dispatch({
-        type: "developers/FETCHED",
-        payload: data
-      });
+      this.props.dispatch(developersFetched(data));
     });
   }
 
@@ -50,7 +48,7 @@ class DevelopersList extends React.Component {
 //  and passes down props derived from the store's state
 //  to the inner component:
 function mapStateToProps(reduxState) {
-  console.log("redux state?", reduxState);
+  //console.log("redux state?", reduxState);
 
   return {
     devs: reduxState.developers
